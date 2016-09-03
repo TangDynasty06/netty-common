@@ -8,7 +8,7 @@ public final class QchatMessage {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface personOrBuilder
+  public interface person1OrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
     // required int32 id = 1;
@@ -37,24 +37,24 @@ public final class QchatMessage {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code message.person}
+   * Protobuf type {@code message.person1}
    */
-  public static final class person extends
+  public static final class person1 extends
       com.google.protobuf.GeneratedMessage
-      implements personOrBuilder {
-    // Use person.newBuilder() to construct.
-    private person(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements person1OrBuilder {
+    // Use person1.newBuilder() to construct.
+    private person1(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private person(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private person1(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final person defaultInstance;
-    public static person getDefaultInstance() {
+    private static final person1 defaultInstance;
+    public static person1 getDefaultInstance() {
       return defaultInstance;
     }
 
-    public person getDefaultInstanceForType() {
+    public person1 getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -64,7 +64,7 @@ public final class QchatMessage {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private person(
+    private person1(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -111,28 +111,28 @@ public final class QchatMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.chat.common.message.QchatMessage.internal_static_message_person_descriptor;
+      return com.chat.common.message.QchatMessage.internal_static_message_person1_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.chat.common.message.QchatMessage.internal_static_message_person_fieldAccessorTable
+      return com.chat.common.message.QchatMessage.internal_static_message_person1_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.chat.common.message.QchatMessage.person.class, com.chat.common.message.QchatMessage.person.Builder.class);
+              com.chat.common.message.QchatMessage.person1.class, com.chat.common.message.QchatMessage.person1.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<person> PARSER =
-        new com.google.protobuf.AbstractParser<person>() {
-      public person parsePartialFrom(
+    public static com.google.protobuf.Parser<person1> PARSER =
+        new com.google.protobuf.AbstractParser<person1>() {
+      public person1 parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new person(input, extensionRegistry);
+        return new person1(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<person> getParserForType() {
+    public com.google.protobuf.Parser<person1> getParserForType() {
       return PARSER;
     }
 
@@ -255,53 +255,53 @@ public final class QchatMessage {
       return super.writeReplace();
     }
 
-    public static com.chat.common.message.QchatMessage.person parseFrom(
+    public static com.chat.common.message.QchatMessage.person1 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.chat.common.message.QchatMessage.person parseFrom(
+    public static com.chat.common.message.QchatMessage.person1 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.chat.common.message.QchatMessage.person parseFrom(byte[] data)
+    public static com.chat.common.message.QchatMessage.person1 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.chat.common.message.QchatMessage.person parseFrom(
+    public static com.chat.common.message.QchatMessage.person1 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.chat.common.message.QchatMessage.person parseFrom(java.io.InputStream input)
+    public static com.chat.common.message.QchatMessage.person1 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.chat.common.message.QchatMessage.person parseFrom(
+    public static com.chat.common.message.QchatMessage.person1 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.chat.common.message.QchatMessage.person parseDelimitedFrom(java.io.InputStream input)
+    public static com.chat.common.message.QchatMessage.person1 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.chat.common.message.QchatMessage.person parseDelimitedFrom(
+    public static com.chat.common.message.QchatMessage.person1 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.chat.common.message.QchatMessage.person parseFrom(
+    public static com.chat.common.message.QchatMessage.person1 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.chat.common.message.QchatMessage.person parseFrom(
+    public static com.chat.common.message.QchatMessage.person1 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -310,7 +310,7 @@ public final class QchatMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.chat.common.message.QchatMessage.person prototype) {
+    public static Builder newBuilder(com.chat.common.message.QchatMessage.person1 prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -322,24 +322,24 @@ public final class QchatMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code message.person}
+     * Protobuf type {@code message.person1}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.chat.common.message.QchatMessage.personOrBuilder {
+       implements com.chat.common.message.QchatMessage.person1OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.chat.common.message.QchatMessage.internal_static_message_person_descriptor;
+        return com.chat.common.message.QchatMessage.internal_static_message_person1_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.chat.common.message.QchatMessage.internal_static_message_person_fieldAccessorTable
+        return com.chat.common.message.QchatMessage.internal_static_message_person1_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.chat.common.message.QchatMessage.person.class, com.chat.common.message.QchatMessage.person.Builder.class);
+                com.chat.common.message.QchatMessage.person1.class, com.chat.common.message.QchatMessage.person1.Builder.class);
       }
 
-      // Construct using com.chat.common.message.QchatMessage.person.newBuilder()
+      // Construct using com.chat.common.message.QchatMessage.person1.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -372,23 +372,23 @@ public final class QchatMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.chat.common.message.QchatMessage.internal_static_message_person_descriptor;
+        return com.chat.common.message.QchatMessage.internal_static_message_person1_descriptor;
       }
 
-      public com.chat.common.message.QchatMessage.person getDefaultInstanceForType() {
-        return com.chat.common.message.QchatMessage.person.getDefaultInstance();
+      public com.chat.common.message.QchatMessage.person1 getDefaultInstanceForType() {
+        return com.chat.common.message.QchatMessage.person1.getDefaultInstance();
       }
 
-      public com.chat.common.message.QchatMessage.person build() {
-        com.chat.common.message.QchatMessage.person result = buildPartial();
+      public com.chat.common.message.QchatMessage.person1 build() {
+        com.chat.common.message.QchatMessage.person1 result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.chat.common.message.QchatMessage.person buildPartial() {
-        com.chat.common.message.QchatMessage.person result = new com.chat.common.message.QchatMessage.person(this);
+      public com.chat.common.message.QchatMessage.person1 buildPartial() {
+        com.chat.common.message.QchatMessage.person1 result = new com.chat.common.message.QchatMessage.person1(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -405,16 +405,16 @@ public final class QchatMessage {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.chat.common.message.QchatMessage.person) {
-          return mergeFrom((com.chat.common.message.QchatMessage.person)other);
+        if (other instanceof com.chat.common.message.QchatMessage.person1) {
+          return mergeFrom((com.chat.common.message.QchatMessage.person1)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.chat.common.message.QchatMessage.person other) {
-        if (other == com.chat.common.message.QchatMessage.person.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.chat.common.message.QchatMessage.person1 other) {
+        if (other == com.chat.common.message.QchatMessage.person1.getDefaultInstance()) return this;
         if (other.hasId()) {
           setId(other.getId());
         }
@@ -443,11 +443,11 @@ public final class QchatMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.chat.common.message.QchatMessage.person parsedMessage = null;
+        com.chat.common.message.QchatMessage.person1 parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.chat.common.message.QchatMessage.person) e.getUnfinishedMessage();
+          parsedMessage = (com.chat.common.message.QchatMessage.person1) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -565,18 +565,18 @@ public final class QchatMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:message.person)
+      // @@protoc_insertion_point(builder_scope:message.person1)
     }
 
     static {
-      defaultInstance = new person(true);
+      defaultInstance = new person1(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:message.person)
+    // @@protoc_insertion_point(class_scope:message.person1)
   }
 
-  public interface studentOrBuilder
+  public interface student2OrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
     // required int32 sId = 1;
@@ -605,24 +605,24 @@ public final class QchatMessage {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code message.student}
+   * Protobuf type {@code message.student2}
    */
-  public static final class student extends
+  public static final class student2 extends
       com.google.protobuf.GeneratedMessage
-      implements studentOrBuilder {
-    // Use student.newBuilder() to construct.
-    private student(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements student2OrBuilder {
+    // Use student2.newBuilder() to construct.
+    private student2(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private student(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private student2(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final student defaultInstance;
-    public static student getDefaultInstance() {
+    private static final student2 defaultInstance;
+    public static student2 getDefaultInstance() {
       return defaultInstance;
     }
 
-    public student getDefaultInstanceForType() {
+    public student2 getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -632,7 +632,7 @@ public final class QchatMessage {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private student(
+    private student2(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -679,28 +679,28 @@ public final class QchatMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.chat.common.message.QchatMessage.internal_static_message_student_descriptor;
+      return com.chat.common.message.QchatMessage.internal_static_message_student2_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.chat.common.message.QchatMessage.internal_static_message_student_fieldAccessorTable
+      return com.chat.common.message.QchatMessage.internal_static_message_student2_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.chat.common.message.QchatMessage.student.class, com.chat.common.message.QchatMessage.student.Builder.class);
+              com.chat.common.message.QchatMessage.student2.class, com.chat.common.message.QchatMessage.student2.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<student> PARSER =
-        new com.google.protobuf.AbstractParser<student>() {
-      public student parsePartialFrom(
+    public static com.google.protobuf.Parser<student2> PARSER =
+        new com.google.protobuf.AbstractParser<student2>() {
+      public student2 parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new student(input, extensionRegistry);
+        return new student2(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<student> getParserForType() {
+    public com.google.protobuf.Parser<student2> getParserForType() {
       return PARSER;
     }
 
@@ -823,53 +823,53 @@ public final class QchatMessage {
       return super.writeReplace();
     }
 
-    public static com.chat.common.message.QchatMessage.student parseFrom(
+    public static com.chat.common.message.QchatMessage.student2 parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.chat.common.message.QchatMessage.student parseFrom(
+    public static com.chat.common.message.QchatMessage.student2 parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.chat.common.message.QchatMessage.student parseFrom(byte[] data)
+    public static com.chat.common.message.QchatMessage.student2 parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.chat.common.message.QchatMessage.student parseFrom(
+    public static com.chat.common.message.QchatMessage.student2 parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.chat.common.message.QchatMessage.student parseFrom(java.io.InputStream input)
+    public static com.chat.common.message.QchatMessage.student2 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.chat.common.message.QchatMessage.student parseFrom(
+    public static com.chat.common.message.QchatMessage.student2 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.chat.common.message.QchatMessage.student parseDelimitedFrom(java.io.InputStream input)
+    public static com.chat.common.message.QchatMessage.student2 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.chat.common.message.QchatMessage.student parseDelimitedFrom(
+    public static com.chat.common.message.QchatMessage.student2 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.chat.common.message.QchatMessage.student parseFrom(
+    public static com.chat.common.message.QchatMessage.student2 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.chat.common.message.QchatMessage.student parseFrom(
+    public static com.chat.common.message.QchatMessage.student2 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -878,7 +878,7 @@ public final class QchatMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.chat.common.message.QchatMessage.student prototype) {
+    public static Builder newBuilder(com.chat.common.message.QchatMessage.student2 prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -890,24 +890,24 @@ public final class QchatMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code message.student}
+     * Protobuf type {@code message.student2}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.chat.common.message.QchatMessage.studentOrBuilder {
+       implements com.chat.common.message.QchatMessage.student2OrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.chat.common.message.QchatMessage.internal_static_message_student_descriptor;
+        return com.chat.common.message.QchatMessage.internal_static_message_student2_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.chat.common.message.QchatMessage.internal_static_message_student_fieldAccessorTable
+        return com.chat.common.message.QchatMessage.internal_static_message_student2_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.chat.common.message.QchatMessage.student.class, com.chat.common.message.QchatMessage.student.Builder.class);
+                com.chat.common.message.QchatMessage.student2.class, com.chat.common.message.QchatMessage.student2.Builder.class);
       }
 
-      // Construct using com.chat.common.message.QchatMessage.student.newBuilder()
+      // Construct using com.chat.common.message.QchatMessage.student2.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -940,23 +940,23 @@ public final class QchatMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.chat.common.message.QchatMessage.internal_static_message_student_descriptor;
+        return com.chat.common.message.QchatMessage.internal_static_message_student2_descriptor;
       }
 
-      public com.chat.common.message.QchatMessage.student getDefaultInstanceForType() {
-        return com.chat.common.message.QchatMessage.student.getDefaultInstance();
+      public com.chat.common.message.QchatMessage.student2 getDefaultInstanceForType() {
+        return com.chat.common.message.QchatMessage.student2.getDefaultInstance();
       }
 
-      public com.chat.common.message.QchatMessage.student build() {
-        com.chat.common.message.QchatMessage.student result = buildPartial();
+      public com.chat.common.message.QchatMessage.student2 build() {
+        com.chat.common.message.QchatMessage.student2 result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.chat.common.message.QchatMessage.student buildPartial() {
-        com.chat.common.message.QchatMessage.student result = new com.chat.common.message.QchatMessage.student(this);
+      public com.chat.common.message.QchatMessage.student2 buildPartial() {
+        com.chat.common.message.QchatMessage.student2 result = new com.chat.common.message.QchatMessage.student2(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -973,16 +973,16 @@ public final class QchatMessage {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.chat.common.message.QchatMessage.student) {
-          return mergeFrom((com.chat.common.message.QchatMessage.student)other);
+        if (other instanceof com.chat.common.message.QchatMessage.student2) {
+          return mergeFrom((com.chat.common.message.QchatMessage.student2)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.chat.common.message.QchatMessage.student other) {
-        if (other == com.chat.common.message.QchatMessage.student.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.chat.common.message.QchatMessage.student2 other) {
+        if (other == com.chat.common.message.QchatMessage.student2.getDefaultInstance()) return this;
         if (other.hasSId()) {
           setSId(other.getSId());
         }
@@ -1011,11 +1011,11 @@ public final class QchatMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.chat.common.message.QchatMessage.student parsedMessage = null;
+        com.chat.common.message.QchatMessage.student2 parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.chat.common.message.QchatMessage.student) e.getUnfinishedMessage();
+          parsedMessage = (com.chat.common.message.QchatMessage.student2) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1133,27 +1133,27 @@ public final class QchatMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:message.student)
+      // @@protoc_insertion_point(builder_scope:message.student2)
     }
 
     static {
-      defaultInstance = new student(true);
+      defaultInstance = new student2(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:message.student)
+    // @@protoc_insertion_point(class_scope:message.student2)
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_message_person_descriptor;
+    internal_static_message_person1_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_message_person_fieldAccessorTable;
+      internal_static_message_person1_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_message_student_descriptor;
+    internal_static_message_student2_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_message_student_fieldAccessorTable;
+      internal_static_message_student2_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1163,27 +1163,27 @@ public final class QchatMessage {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rmessage.proto\022\007message\"\"\n\006person\022\n\n\002id" +
-      "\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\"$\n\007student\022\013\n\003sId\030\001" +
-      " \002(\005\022\014\n\004name\030\002 \002(\tB\'\n\027com.chat.common.me" +
-      "ssageB\014QchatMessage"
+      "\n\rmessage.proto\022\007message\"#\n\007person1\022\n\n\002i" +
+      "d\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\"%\n\010student2\022\013\n\003sId" +
+      "\030\001 \002(\005\022\014\n\004name\030\002 \002(\tB\'\n\027com.chat.common." +
+      "messageB\014QchatMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_message_person_descriptor =
+          internal_static_message_person1_descriptor =
             getDescriptor().getMessageTypes().get(0);
-          internal_static_message_person_fieldAccessorTable = new
+          internal_static_message_person1_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_message_person_descriptor,
+              internal_static_message_person1_descriptor,
               new java.lang.String[] { "Id", "Name", });
-          internal_static_message_student_descriptor =
+          internal_static_message_student2_descriptor =
             getDescriptor().getMessageTypes().get(1);
-          internal_static_message_student_fieldAccessorTable = new
+          internal_static_message_student2_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_message_student_descriptor,
+              internal_static_message_student2_descriptor,
               new java.lang.String[] { "SId", "Name", });
           return null;
         }

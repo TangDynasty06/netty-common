@@ -2,12 +2,12 @@ package message;
 option java_package="com.chat.common.message";
 option java_outer_classname="QchatMessage";
 
-message person
+message person1
 {
 	required int32 id = 1;
 	required string name = 2;
 }
-message student
+message student2
 {
 	required int32 sId = 1;
 	required string name = 2;
