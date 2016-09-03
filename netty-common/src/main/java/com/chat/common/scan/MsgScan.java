@@ -100,12 +100,13 @@ public class MsgScan {
 		String a = finalStr.replaceAll("[\\\\]", "/");
 		System.err.println(a);
 		
-		Pattern p = Pattern.compile("(\\$[a-zA-Z]+[a-zA-Z0-9]+)([0-9]+).class");
+		Pattern p = Pattern.compile("\\$([a-zA-Z]+[a-zA-Z0-9]+)([0-9]+).class$");
 		Matcher m = p.matcher(finalStr);
 		if(m.find()){
 			System.err.println("a");
 			System.err.println(m.group(0));
 			System.err.println(m.group(1));
+			System.err.println(m.group(2));
 		}
 		
 	}
