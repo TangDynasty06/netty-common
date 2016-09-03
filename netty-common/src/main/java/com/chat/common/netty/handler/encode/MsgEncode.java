@@ -1,4 +1,4 @@
-package com.chat.common.netty.handler;
+package com.chat.common.netty.handler.encode;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

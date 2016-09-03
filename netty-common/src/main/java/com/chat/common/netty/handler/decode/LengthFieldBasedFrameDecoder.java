@@ -1,4 +1,4 @@
-package com.chat.common.netty.handler;
+package com.chat.common.netty.handler.decode;
 
 /*
  * Copyright 2012 The Netty Project
