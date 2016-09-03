@@ -100,7 +100,7 @@ public class MsgScan {
 		String a = finalStr.replaceAll("[\\\\]", "/");
 		System.err.println(a);
 		
-		Pattern p = Pattern.compile( a + "([a-zA-Z0-9]+)\\$([a-zA-Z0-9]+)([0-9]+)\\.class\\$");
+		Pattern p = Pattern.compile("(\\$[a-zA-Z]+[a-zA-Z0-9]+)([0-9]+).class");
 		Matcher m = p.matcher(finalStr);
 		if(m.find()){
 			System.err.println("a");
