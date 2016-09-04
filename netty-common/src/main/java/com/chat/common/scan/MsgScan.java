@@ -1,6 +1,9 @@
 package com.chat.common.scan;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,19 +11,21 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
-import com.chat.common.message.QchatMessage.person1;
+import com.google.protobuf.MessageLite;
 
 public class MsgScan {
 	public static final String SUFFIX = "/**/*.class";
 	private ResourcePatternResolver resolver;
-	private static final String regex = "^//$([a-zA-Z]+[a-zA-Z0-9]+)([0-9]+).class$";
-	private Pattern msgPattern;
+	private static final String regex = "/.+?\\$(([A-Za-z0-9]+)([0-9]+)\\.class))]$";
+	private Pattern msgPattern;// = Pattern.compile("\\$(([A-Za-z0-9]+)([0-9]+)\\.class)]$");
 	private String pathStr;
+	private Map<Integer, MessageLite> typeMap = new HashMap<Integer, MessageLite>();
+	private Map<Class,Integer> classMap = new HashMap<Class,Integer>();
 	
 	public MsgScan(String pathStr) {
 		this.pathStr = format(pathStr);
 		resolver = new PathMatchingResourcePatternResolver();
-		msgPattern = Pattern.compile(this.pathStr + regex);
+		msgPattern = Pattern.compile("(" + pathStr + regex);
 	}
 
 
@@ -30,15 +35,29 @@ public class MsgScan {
 		}
 		try {
 			Resource[] res = resolver.getResources(ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + pathStr + MsgScan.SUFFIX);
+			ClassLoader classLoader = getClass().getClassLoader();
 			for (Resource resource : res) {
 				String descript = resource.getDescription();/**斜杠方向是不同的*/
-				descript = descript.replaceAll("\\\\", "/");
-				Matcher matcher = msgPattern.matcher(descript);
-				if(matcher.find()){
-					System.err.println(descript);
-					System.err.print(matcher.find(0));
-					System.err.print(matcher.find(1));
-					System.err.print(matcher.find(2));
+				descript = descript.replaceAll("[\\\\]", "/");
+				Matcher m = msgPattern.matcher(descript);
+				if(m.find() && m.groupCount() >= 3){
+					try {
+						String className = m.group(1);
+						int code = Integer.parseInt(m.group(4));
+						
+						className = className.replaceAll("/", ".");
+						Class<?> claz = Class.forName(className, true, classLoader);
+						Method method = claz.getMethod("getDefaultInstance");
+						Object obj = method.invoke(claz);
+						MessageLite lite = (MessageLite)obj;
+						
+						typeMap.put(code, lite);
+						classMap.put(lite.getClass(), code);
+						
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 			}
 		} catch (IOException e) {
@@ -57,6 +76,14 @@ public class MsgScan {
 			str = str.substring(0, str.length()-1);
 		}
 		return str;
+	}
+	
+	public MessageLite getLiteByCode(int code){
+		return typeMap.get(code);
+	}
+	
+	public int getCodeByClass(Class cla){
+		return classMap.get(cla);
 	}
 	
 	public static void main(String[] args) {
@@ -95,18 +122,24 @@ public class MsgScan {
 		
 		
 		
-		String finalStr = "E:\\git\\netty-common\\netty-common\\target\\classes\\com\\chat\\common\\message\\QchatMessage$person1.class";
-		System.err.println(finalStr);
-		String a = finalStr.replaceAll("[\\\\]", "/");
-		System.err.println(a);
-		
-		Pattern p = Pattern.compile("\\$([a-zA-Z]+[a-zA-Z0-9]+)([0-9]+).class$");
+	/*	String finalStr = "E:\\git\\netty-common\\netty-common\\target\\classes\\com\\chat\\common\\message\\QchatMessage$person1.class";
+		Pattern p = Pattern.compile("\\$([a-zA-Z]+[a-zA-Z0-9]+)([0-9]+)\\.class$");
 		Matcher m = p.matcher(finalStr);
+		System.err.println(finalStr);
+		finalStr = finalStr.replaceAll("[\\\\]", "/");*/
+
+		String finalStr = "file [E:/git/netty-common/netty-common/target/classes/com/chat/common/message/QchatMessage$person1.class]";
+		Pattern p = Pattern.compile("(com/chat/common/message/" + ".+?\\$(([A-Za-z0-9]+)([0-9]+)\\.class)]$)");
+		Matcher m = p.matcher(finalStr);
+		
 		if(m.find()){
+			System.out.println(m.groupCount());
 			System.err.println("a");
 			System.err.println(m.group(0));
 			System.err.println(m.group(1));
 			System.err.println(m.group(2));
+			System.err.println(m.group(3));
+			System.err.println(m.group(4));
 		}
 		
 	}
