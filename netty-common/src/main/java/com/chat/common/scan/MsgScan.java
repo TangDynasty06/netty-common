@@ -16,7 +16,7 @@ import com.google.protobuf.MessageLite;
 public class MsgScan {
 	public static final String SUFFIX = "/**/*.class";
 	private ResourcePatternResolver resolver;
-	private static final String regex = "/.+?\\$(([A-Za-z]+)([0-9]+)))\\.class]$";
+	private static final String regex = "/.+?\\$(([A-Za-z0-9]+?)([0-9]+)))\\.class]$";
 	private Pattern msgPattern;// = Pattern.compile("\\$(([A-Za-z0-9]+)([0-9]+)\\.class)]$");
 	private String pathStr;
 	private Map<Integer, MessageLite> typeMap = new HashMap<Integer, MessageLite>();
@@ -128,8 +128,8 @@ public class MsgScan {
 		System.err.println(finalStr);
 		finalStr = finalStr.replaceAll("[\\\\]", "/");*/
 
-		String finalStr = "file [E:/git/netty-common/netty-common/target/classes/com/chat/common/message/QchatMessage$person100.class]";
-		Pattern p = Pattern.compile("(com/chat/common/message/.+?\\$(([A-Za-z]+)([0-9]+)))\\.class]$");
+		String finalStr = "file [E:/git/netty-common/netty-common/target/classes/com/chat/common/message/QchatMessage$person110.class]";
+		Pattern p = Pattern.compile("(com/chat/common/message/.+?\\$(([A-Za-z0-9]+?)([0-9]+)))\\.class]$");
 		Matcher m = p.matcher(finalStr);
 		
 		if(m.find()){
