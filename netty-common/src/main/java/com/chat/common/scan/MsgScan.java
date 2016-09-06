@@ -11,6 +11,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
+import com.chat.common.message.QchatMessage.person1;
 import com.google.protobuf.MessageLite;
 
 public class MsgScan {
@@ -19,8 +20,8 @@ public class MsgScan {
 	private static final String regex = "/.+?\\$(([A-Za-z0-9]+?)([0-9]+)))\\.class]$";
 	private Pattern msgPattern;// = Pattern.compile("\\$(([A-Za-z0-9]+)([0-9]+)\\.class)]$");
 	private String pathStr;
-	private Map<Integer, MessageLite> typeMap = new HashMap<Integer, MessageLite>();
-	private Map<Class,Integer> classMap = new HashMap<Class,Integer>();
+	private static Map<String, MessageLite> NameMap = new HashMap<String, MessageLite>();
+	private static Map<Class<?>,String> classMap = new HashMap<Class<?>,String>();
 	
 	public MsgScan(String pathStr) {
 		this.pathStr = format(pathStr);
@@ -51,8 +52,8 @@ public class MsgScan {
 						Object obj = method.invoke(claz);
 						MessageLite lite = (MessageLite)obj;
 						
-						typeMap.put(code, lite);
-						classMap.put(lite.getClass(), code);
+						NameMap.put(className, lite);
+						classMap.put(lite.getClass(), className);
 						
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
@@ -78,11 +79,11 @@ public class MsgScan {
 		return str;
 	}
 	
-	public MessageLite getLiteByCode(int code){
-		return typeMap.get(code);
+	public static MessageLite getLiteByName(String name){
+		return NameMap.get(name);
 	}
 	
-	public int getCodeByClass(Class cla){
+	public static String getCodeByClass(Class cla){
 		return classMap.get(cla);
 	}
 	
@@ -138,7 +139,14 @@ public class MsgScan {
 			for (int i = 0; i <= groupCount; i++) {
 				System.err.println(m.group(i) + "----------------------------" + i);
 			}
+			System.err.println(m.group(1).replace("/", "."));
 		}
 		
+		person1.Builder b = person1.newBuilder();
+		b.setId(1);
+		b.setName("aa");
+		MessageLite lite = b.build();
+		System.err.println(lite.getClass().getName());
+		System.err.println(b.build().getClass().getName());
 	}
 }
