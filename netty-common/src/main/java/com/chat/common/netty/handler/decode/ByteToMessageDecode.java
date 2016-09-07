@@ -6,7 +6,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 
 import java.util.List;
 
-import com.chat.common.netty.handler.encode.MessageToByteEncode;
+import com.chat.common.netty.handler.CodeAndEncodeConstant;
 import com.chat.common.scan.MsgScan;
 import com.google.protobuf.MessageLite;
 
@@ -38,7 +38,7 @@ public class ByteToMessageDecode extends ByteToMessageDecoder{
 		}
 		
 		short msgFlag = in.readShort();
-		if(msgFlag != MessageToByteEncode.HEAD_FLAG){
+		if(msgFlag != CodeAndEncodeConstant.HEAD_FLAG){
 			in.resetReaderIndex();
 			return;
 		}
@@ -56,7 +56,7 @@ public class ByteToMessageDecode extends ByteToMessageDecoder{
 		
 		String name = new String(nameArr);
 		
-		if(in.readableBytes() < MessageToByteEncode.MSG_LENGTH){
+		if(in.readableBytes() < CodeAndEncodeConstant.MSG_LENGTH){
 			in.resetReaderIndex();
 			return;
 		}

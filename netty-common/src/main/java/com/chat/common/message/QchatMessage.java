@@ -1144,6 +1144,485 @@ public final class QchatMessage {
     // @@protoc_insertion_point(class_scope:message.student2)
   }
 
+  public interface repeatedMsg3OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string msg = 1;
+    /**
+     * <code>required string msg = 1;</code>
+     */
+    boolean hasMsg();
+    /**
+     * <code>required string msg = 1;</code>
+     */
+    java.lang.String getMsg();
+    /**
+     * <code>required string msg = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getMsgBytes();
+  }
+  /**
+   * Protobuf type {@code message.repeatedMsg3}
+   */
+  public static final class repeatedMsg3 extends
+      com.google.protobuf.GeneratedMessage
+      implements repeatedMsg3OrBuilder {
+    // Use repeatedMsg3.newBuilder() to construct.
+    private repeatedMsg3(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private repeatedMsg3(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final repeatedMsg3 defaultInstance;
+    public static repeatedMsg3 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public repeatedMsg3 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private repeatedMsg3(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              msg_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.chat.common.message.QchatMessage.internal_static_message_repeatedMsg3_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.chat.common.message.QchatMessage.internal_static_message_repeatedMsg3_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.chat.common.message.QchatMessage.repeatedMsg3.class, com.chat.common.message.QchatMessage.repeatedMsg3.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<repeatedMsg3> PARSER =
+        new com.google.protobuf.AbstractParser<repeatedMsg3>() {
+      public repeatedMsg3 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new repeatedMsg3(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<repeatedMsg3> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required string msg = 1;
+    public static final int MSG_FIELD_NUMBER = 1;
+    private java.lang.Object msg_;
+    /**
+     * <code>required string msg = 1;</code>
+     */
+    public boolean hasMsg() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string msg = 1;</code>
+     */
+    public java.lang.String getMsg() {
+      java.lang.Object ref = msg_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          msg_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string msg = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMsgBytes() {
+      java.lang.Object ref = msg_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        msg_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      msg_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasMsg()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getMsgBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getMsgBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.chat.common.message.QchatMessage.repeatedMsg3 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.chat.common.message.QchatMessage.repeatedMsg3 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code message.repeatedMsg3}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.chat.common.message.QchatMessage.repeatedMsg3OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.chat.common.message.QchatMessage.internal_static_message_repeatedMsg3_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.chat.common.message.QchatMessage.internal_static_message_repeatedMsg3_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.chat.common.message.QchatMessage.repeatedMsg3.class, com.chat.common.message.QchatMessage.repeatedMsg3.Builder.class);
+      }
+
+      // Construct using com.chat.common.message.QchatMessage.repeatedMsg3.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msg_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.chat.common.message.QchatMessage.internal_static_message_repeatedMsg3_descriptor;
+      }
+
+      public com.chat.common.message.QchatMessage.repeatedMsg3 getDefaultInstanceForType() {
+        return com.chat.common.message.QchatMessage.repeatedMsg3.getDefaultInstance();
+      }
+
+      public com.chat.common.message.QchatMessage.repeatedMsg3 build() {
+        com.chat.common.message.QchatMessage.repeatedMsg3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.chat.common.message.QchatMessage.repeatedMsg3 buildPartial() {
+        com.chat.common.message.QchatMessage.repeatedMsg3 result = new com.chat.common.message.QchatMessage.repeatedMsg3(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msg_ = msg_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.chat.common.message.QchatMessage.repeatedMsg3) {
+          return mergeFrom((com.chat.common.message.QchatMessage.repeatedMsg3)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.chat.common.message.QchatMessage.repeatedMsg3 other) {
+        if (other == com.chat.common.message.QchatMessage.repeatedMsg3.getDefaultInstance()) return this;
+        if (other.hasMsg()) {
+          bitField0_ |= 0x00000001;
+          msg_ = other.msg_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasMsg()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.chat.common.message.QchatMessage.repeatedMsg3 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.chat.common.message.QchatMessage.repeatedMsg3) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required string msg = 1;
+      private java.lang.Object msg_ = "";
+      /**
+       * <code>required string msg = 1;</code>
+       */
+      public boolean hasMsg() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string msg = 1;</code>
+       */
+      public java.lang.String getMsg() {
+        java.lang.Object ref = msg_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          msg_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string msg = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMsgBytes() {
+        java.lang.Object ref = msg_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          msg_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string msg = 1;</code>
+       */
+      public Builder setMsg(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        msg_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string msg = 1;</code>
+       */
+      public Builder clearMsg() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msg_ = getDefaultInstance().getMsg();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string msg = 1;</code>
+       */
+      public Builder setMsgBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        msg_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:message.repeatedMsg3)
+    }
+
+    static {
+      defaultInstance = new repeatedMsg3(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:message.repeatedMsg3)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_message_person1_descriptor;
   private static
@@ -1154,6 +1633,11 @@ public final class QchatMessage {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_message_student2_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_message_repeatedMsg3_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_message_repeatedMsg3_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1165,8 +1649,9 @@ public final class QchatMessage {
     java.lang.String[] descriptorData = {
       "\n\rmessage.proto\022\007message\"#\n\007person1\022\n\n\002i" +
       "d\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\"%\n\010student2\022\013\n\003sId" +
-      "\030\001 \002(\005\022\014\n\004name\030\002 \002(\tB\'\n\027com.chat.common." +
-      "messageB\014QchatMessage"
+      "\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\"\033\n\014repeatedMsg3\022\013\n\003" +
+      "msg\030\001 \002(\tB\'\n\027com.chat.common.messageB\014Qc" +
+      "hatMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1185,6 +1670,12 @@ public final class QchatMessage {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_message_student2_descriptor,
               new java.lang.String[] { "SId", "Name", });
+          internal_static_message_repeatedMsg3_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_message_repeatedMsg3_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_message_repeatedMsg3_descriptor,
+              new java.lang.String[] { "Msg", });
           return null;
         }
       };

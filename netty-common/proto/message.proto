@@ -12,3 +12,7 @@ message student2
 	required int32 sId = 1;
 	required string name = 2;
 }
+message repeatedMsg3
+{
+	required string msg = 1;
+}
